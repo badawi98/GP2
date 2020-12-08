@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Login</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="./login.html">Uninfected Corona Nurse</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link active" href="./login.html">Login</a>
+          </li>
+          <li class="nav-item" class="active">
+              <a class="nav-link" href="./signup.html">Register</a>
+          </li>
+          <li class="nav-item" class="active">
+            <a class="nav-link" href="./addroom.html">Add Room</a>
+          </li>
+          <li class="nav-item" class="active">
+            <a class="nav-link" href="./oder.html">Add Order</a>
+          </li>
+        </ul>    
+      </div>
+    </nav>
+    <div 
+    class="border border-light p-3 mb-4">
+    <div 
+      class="d-flex align-items-center justify-content-center" 
+      style="height: 500px;">    
+      <form action="/GP2/php/login.php" method="post">  
+        <div class="form-group">
+          <h1 
+            class="font-italic" 
+            class="text-center">LogIn</h1>
+          <br>
+          <input 
+            type="text" 
+            class="form-control" 
+            required
+            name="username"
+            placeholder="Username">
+          <br>
+          <input 
+            type="password" 
+            class="form-control" 
+            id="pass" 
+            required
+            name="password"
+            placeholder="password">
+          <br>
+          <p>
+            Forget password?</p>     
+          <button 
+            type="submit"
+              [disabled]="!postForm.valid"
+            class="btn btn-primary btn-lg btn-block"
+            >Login</button>
+          <br>
+          <br>
+          <p>Don't have an account ? <a href="/GP2/HTML/signup.html"><span class="text-primary">Creat Your account</span></a> </p>
+        </div>
+        </form>   
+    </div>
+  </div>
+  
+  
+    
+  
+  
+  
+  </body>
+</html>
+
