@@ -1,4 +1,5 @@
 <?php   
+
 $name = $email = $gender = $username = $password = $date = $repassword = "";
 $nameErr = $emailErr = $genderErr = $usernameErr = $passwordErr = $dateErr = $repasswordErr = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -79,6 +80,7 @@ if($nameErr == ""  && $emailErr == "" && $dateErr == "" && $genderErr == "" && $
 
   if ($conn->query($sql1) === TRUE) {
     echo "SQL1 New record created successfully";
+    header('Location: http://localhost/GP2/HTML/signup.php');
   } else {
     echo "Error: " . $sql1 . "<br>" . $conn->error;
   }

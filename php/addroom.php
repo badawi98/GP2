@@ -1,5 +1,4 @@
 <?php
-
 $roomID = $username = "";
 $hasOrder = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

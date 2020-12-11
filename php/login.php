@@ -19,8 +19,8 @@ if($username != "" && $password != ""){
         for ($i = 0; $i < $result->num_rows; $i++) {
             $row = $result->fetch_assoc();
             if ($row["Username"] == $username && $row["Password"] == sha1($password)) {
-                header('Location: http://localhost/GP2/HTML/addroom.html');
-
+                header('Location: http://localhost/GP2/HTML/signup.php');
+                setSession();
                     break;
             }
 
@@ -28,7 +28,10 @@ if($username != "" && $password != ""){
     }
     CloseCon($conn);
 }
-
+function setSession(){
+  session_start();
+  $_SESSION["admin"] = "true";
+}
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
