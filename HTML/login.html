@@ -7,29 +7,6 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="./login.html">Uninfected Corona Nurse</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link active" href="./login.html">Login</a>
-          </li>
-          <li class="nav-item" class="active">
-              <a class="nav-link" href="./signup.html">Register</a>
-          </li>
-          <li class="nav-item" class="active">
-            <a class="nav-link" href="./addroom.html">Add Room</a>
-          </li>
-          <li class="nav-item" class="active">
-            <a class="nav-link" href="./oder.html">Add Order</a>
-          </li>
-        </ul>    
-      </div>
-    </nav>
     <div 
     class="border border-light p-3 mb-4">
     <div 
@@ -56,8 +33,7 @@
             name="password"
             placeholder="password">
           <br>
-          <p>
-            Forget password?</p>     
+          
           <button 
             type="submit"
               [disabled]="!postForm.valid"
@@ -65,7 +41,6 @@
             >Login</button>
           <br>
           <br>
-          <p>Don't have an account ? <a href="/GP2/HTML/signup.html"><span class="text-primary">Creat Your account</span></a> </p>
         </div>
         </form>   
     </div>

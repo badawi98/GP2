@@ -72,21 +72,15 @@ if($nameErr == ""  && $emailErr == "" && $dateErr == "" && $genderErr == "" && $
   $conn = OpenCon();
   $password =  sha1($password);
 
-  $sql1 = ("INSERT INTO Users (`Name` , `Birthdate` , `E-mail` , `Username` , `Gender`)
-  VALUES ('$name','$date' , '$email' , '$username' , '$gender')");
+  $sql1 = ("INSERT INTO patients (`Name` , `Birthdate` , `E-mail` , `Username` , `Gender` , `Password`)
+  VALUES ('$name','$date' , '$email' , '$username' , '$gender' , '$password')");
 
-  $sql2 = ("INSERT INTO Passwords (`Username`,`Password`)
-  VALUES ('$username','$password')");
+
 
   if ($conn->query($sql1) === TRUE) {
     echo "SQL1 New record created successfully";
   } else {
     echo "Error: " . $sql1 . "<br>" . $conn->error;
-  }
-  if ($conn->query($sql2) === TRUE) {
-    echo "SQL2 New record created successfully";
-  } else {
-    echo "Error: " . $sql2 . "<br>" . $conn->error;
   }
   CloseCon($conn);
 
@@ -100,10 +94,10 @@ function test_input($data) {
 }
 function OpenCon()
 {
-   $dbhost = "localhost";
-   $dbuser = "root";
-   $dbpass = "";
-   $db = "GP2";
+   $dbhost = "sql7.freemysqlhosting.net";
+   $dbuser = "sql7381534";
+   $dbpass = "qL8C2fVrY1";
+   $db = "sql7381534";
    
    $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die('Could not connect to MySQL: ' .mysqli_connect_error());
    return $conn;

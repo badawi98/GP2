@@ -33,10 +33,11 @@ function test_input($data) {
   }
 function OpenCon()
 {
-   $dbhost = "localhost";
-   $dbuser = "root";
-   $dbpass = "";
-   $db = "GP2";
+  $dbhost = "sql7.freemysqlhosting.net";
+  $dbuser = "sql7381534";
+  $dbpass = "qL8C2fVrY1";
+  $db = "sql7381534";
+
    
    $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die('Could not connect to MySQL: ' .mysqli_connect_error());
    return $conn;
