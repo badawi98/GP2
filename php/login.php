@@ -40,10 +40,10 @@ function test_input($data) {
   }
 function OpenCon()
 {
-  $dbhost = "sql7.freemysqlhosting.net";
-  $dbuser = "sql7381534";
-  $dbpass = "qL8C2fVrY1";
-  $db = "sql7381534";
+  $dbhost = "remotemysql.com";
+  $dbuser = "Fg7RTbtnbK";
+  $dbpass = "wzkdvOtlru";
+  $db = "Fg7RTbtnbK";
 
    $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die('Could not connect to MySQL: ' .mysqli_connect_error());
    return $conn;
